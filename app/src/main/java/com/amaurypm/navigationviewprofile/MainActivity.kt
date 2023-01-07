@@ -5,7 +5,11 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.View
 import androidx.core.view.GravityCompat
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.ui.NavigationUI
 import com.amaurypm.navigationviewprofile.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +22,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.nvMain.itemIconTintList = null
+
+
+        val navController = Navigation.findNavController(this, R.id.navHostFragment)
+
+        NavigationUI.setupWithNavController(binding.nvMain, navController)
+
+
+        navController.addOnDestinationChangedListener(NavController.OnDestinationChangedListener { controller, destination, arguments ->
+            binding.tvTitle.text = destination.label
+        })
 
     }
 

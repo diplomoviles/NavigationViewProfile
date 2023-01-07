@@ -3,22 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/profileFragment">
+    app:startDestination="@id/menuProfile">
 
 
     <fragment
-        android:id="@+id/profileFragment"
+        android:id="@+id/menuProfile"
         android:name="com.amaurypm.navigationviewprofile.ProfileFragment"
-        android:label="fragment_profile"
+        android:label="Perfil"
         tools:layout="@layout/fragment_profile" />
     <fragment
-        android:id="@+id/inboxFragment"
+        android:id="@+id/menuInbox"
         android:name="com.amaurypm.navigationviewprofile.InboxFragment"
-        android:label="fragment_inbox"
+        android:label="Bandeja de entrada"
         tools:layout="@layout/fragment_inbox" />
     <fragment
-        android:id="@+id/settingsFragment"
+        android:id="@+id/menuSettings"
         android:name="com.amaurypm.navigationviewprofile.SettingsFragment"
-        android:label="fragment_settings"
+        android:label="Configuración"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.amaurypm.navigationviewprofile.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" />
+    <fragment
+        android:id="@+id/menuNotifications"
+        android:name="com.amaurypm.navigationviewprofile.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/menuCollection"
+        android:name="com.amaurypm.navigationviewprofile.CollectionsFragment"
+        android:label="fragment_collections"
+        tools:layout="@layout/fragment_collections" />
 </navigation>
